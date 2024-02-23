@@ -1,0 +1,20 @@
+---
+const title = Astro.props.title || "My epic title";
+const heading = Astro.props.heading || "My super heading";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{ title }</title>
+  </head>
+  <body>
+    <h1>{ heading }</h1>
+    <ul>
+      <li><a href="/">Index page</a></li>
+      <li><a href="/about">About page</a></li>
+      <li><a href="/admin/"></a></li>
+    </ul>
+    <slot />
+  </body>
+</html>

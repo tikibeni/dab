@@ -1,0 +1,8 @@
+project1/
+app-cache
+*.zip
+.vscode
+.idea
+node_modules
+package-lock.json
+build

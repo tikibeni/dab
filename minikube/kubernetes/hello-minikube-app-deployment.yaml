@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-minikube-app-deployment
+  labels:
+    app: hello-minikube-app
+spec:
+  selector:
+    matchLabels:
+      app: hello-minikube-app
+  template:
+    metadata:
+      labels:
+        app: hello-minikube-app
+    spec:
+      containers:
+        - name: hello-minikube-app
+          image: hello-minikube-app:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 7777

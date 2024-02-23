@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const id = Astro.params.id;
+const id1 = (parseInt(id)+1).toString()
+
+---
+
+<Layout>
+  <p>You are at { id }.</p>
+  <a href={id1}>Next</a>
+</Layout>
